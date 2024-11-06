@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЛР5</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Лабораторна робота 5</h1>
+    </header>
+
+    <section class="tasks">
+        <button onclick="selectTask(1)">Завдання №1</button>
+        <button onclick="selectTask(2)">Завдання №2</button>
+        <button onclick="selectTask(3)">Завдання №3</button>
+        <button onclick="selectTask(4)">Завдання №4</button>
+        <button onclick="selectTask(5)">Завдання №5</button>
+    </section>
+
+    <section id="editorSection" style="display: none;">
+        <textarea id="editorText" rows="10" cols="50" placeholder="Введіть текст тут..."></textarea>
+        <div class="toolbar">
+            <button onclick="applyStyle('bold')">Жирний</button>
+            <button onclick="applyStyle('italic')">Курсив</button>
+            <button onclick="applyStyle('underline')">Підкреслений</button>
+            <button onclick="changeColor()">Колір тексту</button>
+            <input type="color" id="color-picker" onchange="applyColor(this.value)" title="Choose text color">
+            <button onclick="toggleCase()">Змінити регістр</button>
+        </div>
+        <div id="formattedText"></div>
+    </section>
+</body>
+</html>
